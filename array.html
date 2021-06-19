@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        array
+    </title>
+    <style>
+        div{
+            background: rgb(199, 196, 196);
+        }
+    </style>
+</head>
+<body>
+    <p id="p1">1</p>
+    <script  type="text/javascript">
+        var fruits = ["Banana","Orange","Apple","Mango"] ;
+        var p1 = document.getElementById("p1");
+        fruits2 = fruits.push("Lemon","Ponapple");
+        fruits.sort();
+        fruits.reverse();
+       document.write("<div>");
+        document.write("<ul>");
+             for(var n=0;n<fruits.length;n++){
+                 document.write("<li>"+fruits[n]+"</li>");
+                }
+        document.write("</ul>");
+      document.write("</div>");
+     </script>
+
+   <p id="p2">2</p>
+    <script>
+        var number = [40,100,1,5,25,10]
+        number.sort(function(a,b){return b-a});
+        number.reverse();
+        document.write("<div>");
+        document.write(number);
+        document.write("</div>");
+    </script>
+
+    <p id="p3">3</p>
+    <script>
+        var car = [{type:"Volve",year:2016},{type:"Saab",year:2001},{type:"BMW",year:2010}];
+        car.sort(function(a,b){return a.year-b.year});
+        document.write("<div>");
+        document.write(car[0].type+":"+car[0].year+"<br>"); 
+        document.write(car[1].type+":"+car[1].year+"<br>");
+        document.write(car[2].type+":"+car[2].year);
+        document.write("</div>")}
+    </script>
+
+    <p id="p4">4</p>
+    <script>
+        var arr = [4,9,16,25];
+        document.write("<div>");
+        for(var n=0;n<=3 ;n++){
+            var i = arr[n];
+            document.write("index"+arr.indexOf(i)+": "+arr[n]+"<br>");
+        }
+        document.write("</div>");
+    </script>
+</body>
+</html>
