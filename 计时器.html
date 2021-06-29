@@ -7,7 +7,7 @@
     </head>
     <body>
         <div>
-            timecount!
+            timecount!<br/>
             <button id = "btm" onclick="timecount()">
                 START!
             </button>
@@ -19,10 +19,10 @@
             var a = document.getElementById"demo";
             var t = 0;
             setInterval(count(),1000);
-            count(){
-                var t2 = t++;
+            function count(){
+                var t2 = t++; 
+                a.innerHTML = t2 + "s";
             }
-            a.innerHTML = t2 + "s";
         }
     </script>
 </html>
