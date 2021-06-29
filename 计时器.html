@@ -4,26 +4,55 @@
         <title>
                 计时器
         </title>
+        <style>
+            body{
+                background-color: aquamarine;
+            }
+            p{
+                text-align: center;
+                font-style: italic;
+                font-size: 50px;
+            }
+            button{
+                border: cadetblue 2px;
+                border-radius: 5%;
+                padding: 5px;
+            }
+            div{
+                position:absolute;
+                left: 250px;
+                top: 150px;
+                border: red 10px solid;
+                padding: 10px 50px;
+            }
+        </style>
     </head>
     <body>
-        <div>
-            timecount!<br/>
-            <button id = "btm" onclick="timecount()">
+        <p>timecount!<br/></p>
+        <button onclick="timing()">
                 START!
-            </button>
-        </div>
-        <div id = "demo"></div>
-    </body>
-    <script>
-        function timecount(){
-            var a = document.getElementById"demo";
-            var t = 0;
-            setInterval(updateNum(),1000);
-            updateNum();
-            function updateNum(){
-                var t2 = t++; 
-                a.innerHTML = t2 + "s";
+        </button>
+        <button onclick="stoptime()">
+            STOP
+        </button>
+        <div id = "demo">
+        </div> 
+        <script>
+            var stp
+            function timing(){
+                var abc = document.getElementById("demo");
+                var b = 0;
+                stp = setInterval(updateNum,1000);
+                updateNum();
+                function updateNum(){
+                    var c = b++; 
+                    abc.innerHTML = c + "s";
+                }
             }
-        }
-    </script>
+            var stp = setInterval(updateNum,1000);
+            function stoptime(){
+                clearInterval(stp);
+            }
+        </script>
+    </body>
 </html>
