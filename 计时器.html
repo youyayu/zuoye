@@ -1,37 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head> 
-<title>计时器</title> 
-</head>
-<body>
-<script>
-var c=0;
-var t;
-var time=0;
-function timedCount(){
-	document.getElementById('demo').value=c;
-	c=c+1;
-	t=setTimeout(function(){timedCount()},1000);
-}
-function doTimer(){
-	if (!time){
-		time=1;
-		timedCount();
-	}
-}
-function stopCount(){
-	clearTimeout(t);
-	time=0;
-}
-</script>
-<form>
-<input type="button" value="开始计数" onclick="doTimer()" />
-<input type="text" id="demo" />
-<input type="button" value="停止计数" onclick="stopCount()" />
-</form>
-<p>
-计时器！
-</p>
-</body>
-	
+    <head>
+        <title>
+                计时器
+        </title>
+    </head>
+    <body>
+        <div>
+            timecount!
+            <button id = "btm" onclick="timecount()">
+                START!
+            </button>
+        </div>
+        <p id = "demo"></p>
+    </body>
+    <script>
+        function timecount(){
+            var a = document.getElementById"demo";
+            var t = 0;
+            setInterval(count(),1000);
+            count(){
+                var t2 = t++;
+            }
+            a.innerHTML = t2 + "s";
+        }
+    </script>
 </html>
